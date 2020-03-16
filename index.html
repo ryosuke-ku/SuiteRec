@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Code Searcher</title>
+<link rel = "icon" href="image/tcs.ico">
+<link rel = "stylesheet" href="css/style.css">
+<style>
+h1 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<h1 align="center"><font color="white">Test Code Searcher</font></h1>
+<div id="form-main">
+    <div id="form-div">
+        <form action="/cgi-bin/cgi-tcs.py" method="POST">
+          <!-- <p>Input Code<br> -->
+          <textarea type="text" name="text" cols="150" rows="50" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Code Fragment"></textarea></p>
+          <input type="submit" name="submit" value="SEARCH" id="button-blue"/>
+      </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<html>
+<head>
+<title>Test Code Searcher Report</title>
+<meta http-equiv="content-type" charset="utf-8">
+<style>
+body {
+    background-color: #456;
+}
+h1 {
+    margin-top: 25px;
+    color: white;
+}
+h2 {
+    color: white;
+}
+td {
+    border: solid 1px; 
+    padding: 10px; 
+    border-left: 0px;
+    border-bottom: 0px;
+}
+th {
+    background-color: #eee;
+    border: solid 1px;
+    padding: 10px;
+    font-weight: normal;
+    border-left: 0px; 
+    border-bottom: 0px; 
+}
+mark.red {
+    background-color: #FFC4C1;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+mark.yellow {
+    background-color: rgb(254, 234, 123);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+mark.green {
+    background-color: #B5EFDB;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+mark.grey {
+    background-color: #EAEEF0;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+mark.darkred {
+    background-color: #FF8983;
+}
+mark.darkgreen_line {
+    background-color: #6BDFB8;
+}
+mark.darkred_line {
+    background-color: #FF8983;
+}
+mark.darkgreen {
+    background-color: #6BDFB8;
+}
+.whitecolor {
+	background-color: white;
+}
+#table-flame {
+    background-color: rgba(72,72,72,0.4);
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 3px;
+    padding-bottom: 50px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+}
+table, td, th {
+border: 2px #cccccc solid;
+}
+table {
+  border: 1px solid #aaa;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+table thead th,
+table th,
+table td {
+  padding: .6em 3em;
+  border-bottom: 1px solid #aaa;
+}
+table thead th {
+  background-color: #ddd;
+}
+table th {
+  background-color: #eee;
+}
+table thead th + th,
+table td {
+  border-left: 1px solid #aaa;
+}
+table tr:last-child th,
+table tr:last-child td {
+  border-bottom: none;
+}
+td.leftcode {
+   border-top: 0px;
+   border-bottom: none;
+   padding: 0px;
+   padding-left: 5%;
+   height: 5px;
+}
+td.rightcode {
+   border-top: 0px;
+   border-bottom: 0px;
+   padding: 0px;
+   padding-left: 5%;
+   height: 5px;
+}
+pre {
+   overflow: auto;
+   white-space: pre-wrap;
+   word-wrap: break-word;
+   margin: 0%;
+}
+</style>
+<head>
+<body>
+<h1 align="center">Test Code Searcher Report</h1>
+<div id="table-flame">
+<h2 align="center">Clone Pairs 1 : 54.8%</h2>
+<table border="1" width=50% height="50" align="center">
+<tr>
+<th class="title" colspan="3" width="500px" height="50%" align="center">Input Code</th>
+<th class="title" colspan="3" width="500px" height="50%" align="center">Similarity Code</th>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkred_line">!    public int calcMediumMinMax(String select,int a, int b, int c)</mark></pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkgreen_line">!    public int calcMediumMinMaxNum(String select,int x, int y, int z)</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>     {</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>     {</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>        if (select == "Medium"){</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>        if (select == "Medium"){</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkred_line">!          if (a < b) {</mark></pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkgreen_line">!          if (x < y) {</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkred_line">!             if (b < c) {</mark></pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkgreen_line">!             if (y < z) {</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#FFC4C1" colspan="3"><pre>!                return <mark class="darkred">b;</mark></pre></td>
+<td class="rightcode" bgcolor="#B5EFDB" colspan="3"><pre>!                return <mark class="darkgreen">y;</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkred_line">!             } else if (a < c) {</mark></pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkgreen_line">!             } else if (x < z) {</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#FFC4C1" colspan="3"><pre>!                return <mark class="darkred">c;</mark></pre></td>
+<td class="rightcode" bgcolor="#B5EFDB" colspan="3"><pre>!                return <mark class="darkgreen">z;</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>              } else {</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>              } else {</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#FFC4C1" colspan="3"><pre>!                return <mark class="darkred">a;</mark></pre></td>
+<td class="rightcode" bgcolor="#B5EFDB" colspan="3"><pre>!                return <mark class="darkgreen">x;</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>              }</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>              }</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>           } else {</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>           } else {</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkred_line">!             if (a < c) {</mark></pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkgreen_line">!             if (x < z) {</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#FFC4C1" colspan="3"><pre>!                return <mark class="darkred">a;</mark></pre></td>
+<td class="rightcode" bgcolor="#B5EFDB" colspan="3"><pre>!                return <mark class="darkgreen">x;</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkred_line">!             } else if (b < c){</mark></pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkgreen_line">!             } else if (y < z){</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#FFC4C1" colspan="3"><pre>!                return <mark class="darkred">c;</mark></pre></td>
+<td class="rightcode" bgcolor="#B5EFDB" colspan="3"><pre>!                return <mark class="darkgreen">z;</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>              } else {</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>              } else {</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#FFC4C1" colspan="3"><pre>!                return <mark class="darkred">b;</mark></pre></td>
+<td class="rightcode" bgcolor="#B5EFDB" colspan="3"><pre>!                return <mark class="darkgreen">y;</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>              }</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>              }</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>           }</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>           }</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>        }</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>        }</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>        else if (select == "max"){</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>        else if (select == "max"){</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkred_line">!          return Math.max(a, Math.max(b,c));</mark></pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkgreen_line">!          return Math.max(x, Math.max(y,z));</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>        }</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>        }</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>        else if (select == "min"){</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>        else if (select == "min"){</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkred_line">!          return Math.min(a, Math.min(b,c));</mark></pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre><mark class="darkgreen_line">!          return Math.min(x, Math.min(y,z));</mark></pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>        }</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>        }</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>        else {</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>        else {</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>           return -1;</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>           return -1;</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>        }</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>        }</pre></td>
+</tr>
+<tr>
+<td class="leftcode" bgcolor="#fbfbfb" colspan="3"><pre>     }</pre></td>
+<td class="rightcode" bgcolor="#fbfbfb" colspan="3"><pre>     }</pre></td>
+</tr>
+<tr><td colspan="6"></td></tr><tr><th colspan="6">Test Suite</th></tr><tr>
+<td class="whitecolor" width="10%" height="5spx" align="center">Assertion Roulette</td><td class="whitecolor" width="10%" height="5px" align="center">Conditional Test Logic</td><td class="whitecolor" width="10%" height="5px" align="center">Default Test</td><td class="whitecolor" width="10%" height="5px" align="center">Eager Test</td><td bgcolor="#FF9966" width="10%" height="5px" align="center">Exception Handling</td><td class="whitecolor" width="10%" height="5px" align="center">Mystery Guest</td><tr>
+<th colspan="6" width="500px" height="50%" align="left">
+Lines 8 - 14 of tcs-expt-similar/src/test/java/jp/tcs/expt01/CalcMediumMinMaxNumTest.java
+</th>
+</tr>
+<tr>
+<td class="whitecolor" colspan="10" width="500px" height="50%">
+<pre>
+	  @Test //引数を大中小の順に入力して中央値を返す
+	  public void testCalcMediumOfThreeValues_Large_Medium_Small()  throws Throwable  {
+	      CalcMediumMinMaxNum sut = new CalcMediumMinMaxNum();
+	      int actual = sut.calcMediumMinMaxNum("Medium",300, 200, 100);
+	      assertEquals(200, actual);
+	  }
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="6" width="500px" height="50%" align="left">
+Lines 15 - 21 of tcs-expt-similar/src/test/java/jp/tcs/expt01/CalcMediumMinMaxNumTest.java
+</th>
+</tr>
+<tr>
+<td class="whitecolor" colspan="10" width="500px" height="50%">
+<pre>
+	  @Test //引数を大小中の順に入力して中央値を返す
+	  public void testCalcMediumOfThreeValues_Large_Small_Medium()  throws Throwable  {
+	      CalcMediumMinMaxNum sut = new CalcMediumMinMaxNum();
+	      int actual = sut.calcMediumMinMaxNum("Medium",300, 100, 200);
+	      assertEquals(200, actual);
+	  }
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="6" width="500px" height="50%" align="left">
+Lines 22 - 28 of tcs-expt-similar/src/test/java/jp/tcs/expt01/CalcMediumMinMaxNumTest.java
+</th>
+</tr>
+<tr>
+<td class="whitecolor" colspan="10" width="500px" height="50%">
+<pre>
+	  @Test //引数を中大小の順に入力して中央値を返す
+	  public void testCalcMediumOfThreeValues_Medium_Large_Small()  throws Throwable  {
+	      CalcMediumMinMaxNum sut = new CalcMediumMinMaxNum();
+	      int actual = sut.calcMediumMinMaxNum("Medium",200, 300, 100);
+	      assertEquals(200, actual);
+	  }
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="6" width="500px" height="50%" align="left">
+Lines 29 - 35 of tcs-expt-similar/src/test/java/jp/tcs/expt01/CalcMediumMinMaxNumTest.java
+</th>
+</tr>
+<tr>
+<td class="whitecolor" colspan="10" width="500px" height="50%">
+<pre>
+	  @Test //引数を中小大の順に入力して中央値を返す
+	  public void testCalcMediumOfThreeValues_Medium_Small_Large()  throws Throwable  {
+	      CalcMediumMinMaxNum sut = new CalcMediumMinMaxNum();
+	      int actual = sut.calcMediumMinMaxNum("Medium",200, 100, 300);
+	      assertEquals(200, actual);
+	  }
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="6" width="500px" height="50%" align="left">
+Lines 36 - 42 of tcs-expt-similar/src/test/java/jp/tcs/expt01/CalcMediumMinMaxNumTest.java
+</th>
+</tr>
+<tr>
+<td class="whitecolor" colspan="10" width="500px" height="50%">
+<pre>
+	  @Test //引数を小大中の順に入力して中央値を返す
+	  public void testCalcMediumOfThreeValues_Small_Large_Medium()  throws Throwable  {
+	      CalcMediumMinMaxNum sut = new CalcMediumMinMaxNum();
+	      int actual = sut.calcMediumMinMaxNum("Medium",100, 300, 200);
+	      assertEquals(200, actual);
+	  }
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="6" width="500px" height="50%" align="left">
+Lines 43 - 49 of tcs-expt-similar/src/test/java/jp/tcs/expt01/CalcMediumMinMaxNumTest.java
+</th>
+</tr>
+<tr>
+<td class="whitecolor" colspan="10" width="500px" height="50%">
+<pre>
+	  @Test //引数を小中大の順に入力して中央値を返す
+	  public void testCalcMediumOfThreeValues_Small_Medium_Large()  throws Throwable  {
+	      CalcMediumMinMaxNum sut = new CalcMediumMinMaxNum();
+	      int actual = sut.calcMediumMinMaxNum("Medium",100, 200, 300);
+	      assertEquals(200, actual);
+	  }
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="6" width="500px" height="50%" align="left">
+Lines 50 - 56 of tcs-expt-similar/src/test/java/jp/tcs/expt01/CalcMediumMinMaxNumTest.java
+</th>
+</tr>
+<tr>
+<td class="whitecolor" colspan="10" width="500px" height="50%">
+<pre>
+	  @Test //int型の3引数の最小値を返す
+	  public void testCalcMinimumOfThreeValues()  throws Throwable  {
+	      CalcMediumMinMaxNum sut = new CalcMediumMinMaxNum();
+	      int actual = sut.calcMediumMinMaxNum("min",300, 200, 100);
+	      assertEquals(100, actual);
+	  }
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="6" width="500px" height="50%" align="left">
+Lines 57 - 63 of tcs-expt-similar/src/test/java/jp/tcs/expt01/CalcMediumMinMaxNumTest.java
+</th>
+</tr>
+<tr>
+<td class="whitecolor" colspan="10" width="500px" height="50%">
+<pre>
+	  @Test //int型の3引数の最大値を返す
+	  public void testCalcMaximumOfThreeValues()  throws Throwable  {
+	      CalcMediumMinMaxNum sut = new CalcMediumMinMaxNum();
+	      int actual = sut.calcMediumMinMaxNum("max", 200, 300, 100);
+	      assertEquals(300, actual);
+	  }
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="6" width="500px" height="50%" align="left">
+Lines 64 - 70 of tcs-expt-similar/src/test/java/jp/tcs/expt01/CalcMediumMinMaxNumTest.java
+</th>
+</tr>
+<tr>
+<td class="whitecolor" colspan="10" width="500px" height="50%">
+<pre>
+	  @Test //無効な値を入力して-1を返す
+	  public void testInputInvalidValue()  throws Throwable  {
+	      CalcMediumMinMaxNum sut = new CalcMediumMinMaxNum();
+	      int actual = sut.calcMediumMinMaxNum("xxxx",100, 200, 300);
+	      assertEquals(-1, actual);
+	  }
+</pre>
+</td>
+</tr>
+</table>
+</div>
+<p></p></body>
+</html>

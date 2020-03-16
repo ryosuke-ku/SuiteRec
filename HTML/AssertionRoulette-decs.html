@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>Assertion Roulette Description</title>
+</head>
+<meta http-equiv="content-type" charset="utf-8">
+<style>
+h1 {
+    color: white;
+    margin-top: 25px;
+}
+
+h2 {
+    color: white;
+}
+
+body {
+    background-color: #456;
+}
+td {
+    border: solid 1px; 
+    padding: 10px; 
+    border-left: 0px;
+    border-bottom: 0px;
+}
+
+th {
+    /* background-color: #eee; */
+    border: solid 1px;
+    padding: 10px;
+    font-weight: normal;
+    border-left: 0px; 
+    border-bottom: 0px; 
+}
+
+.whitecolor {
+	background-color: white;
+}
+
+#table-flame {
+    background-color: rgba(72,72,72,0.4);
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 50px; 
+    /* position: absolute; */
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+}
+
+table, td, th {
+border: 2px #cccccc solid;
+}
+
+table {
+  border: 1px solid #aaa;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+table thead th,
+table th,
+table td {
+  padding: .6em 3em;
+  border-bottom: 1px solid #aaa;
+}
+
+table thead th {
+  background-color: #ddd;
+}
+table th {
+  /* background-color: #eee; */
+  background-color: #FF9966;
+  font-size: 20px;
+  font-weight: bold;
+}
+table thead th + th,
+table td {
+  border-left: 1px solid #aaa;
+}
+table tr:last-child th,
+table tr:last-child td {
+  border-bottom: none;
+}
+
+ul {
+  background: #f3fbff;
+  border: 2px skyblue dashed;
+}
+</style>
+<body>
+<h1 align = 'center'>Test Smell Description</h1>
+<table align = 'center'>
+<tr>
+<th >Assertion Roulette Description</th>
+</tr>
+<tr>
+<td class="whitecolor">
+<pre>
+    @MediumTest
+    public void testCloneNonBareRepoFromLocalTestServer() throws Exception {
+        Clone cloneOp = new Clone(false, integrationGitServerURIFor("small-repo.early.git"), helper().newFolder());
+    
+        Repository repo = executeAndWaitFor(cloneOp);
+    
+        assertThat(repo, hasGitObject("ba1f63e4430bff267d112b1e8afc1d6294db0ccc"));
+    
+        File readmeFile = new File(repo.getWorkTree(), "README");
+        assertThat(readmeFile, exists());
+        assertThat(readmeFile, ofLength(12));
+    }
+</pre>
+</td>
+</tr>
+<tr>
+<td class="whitecolor">
+<p>1つのテストメソッド内に複数のassert文が存在するテストコード</p>
+<ul>
+<li>各assert文は異なる条件をテストするが、開発者へ各assert文のエラーメッセージは提供されない</li>
+<li>assert文の一つが失敗した場合、失敗の原因を特定するのが困難である</li>
+</ul>
+
+<p>Test code with multiple assert statements in one test method</p>
+<ul>
+<li>Each assert statement tests different conditions, but the error message for each assert statement is not provided to the developer　</li>
+<li>If one of the assert statements fails, it is difficult to identify the cause of the failure</li>
+</ul>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
